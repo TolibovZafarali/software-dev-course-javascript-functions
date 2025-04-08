@@ -33,25 +33,25 @@ This activity reinforces:
 // ============================================
 
 // Script 1 - Greeting multiple users
-console.log("Welcome, Alice!");
-console.log("Welcome, Bob!");
-console.log("Welcome, Charlie!");
+// console.log("Welcome, Alice!");
+// console.log("Welcome, Bob!");
+// console.log("Welcome, Charlie!");
 
-// Script 2 - Sum calculation
-let num1 = 5, num2 = 10;
-let sum = num1 + num2;
-console.log("The sum of 5 and 10 is " + sum);
+// // Script 2 - Sum calculation
+// let num1 = 5, num2 = 10;
+// let sum = num1 + num2;
+// console.log("The sum of 5 and 10 is " + sum);
 
-// Script 3 - Product calculation
-let product = num1 * num2;
-console.log("The product of 5 and 10 is " + product);
+// // Script 3 - Product calculation
+// let product = num1 * num2;
+// console.log("The product of 5 and 10 is " + product);
 
-// Script 4 - Print names from a list
-let names = ["Alice", "Bob", "Charlie"];
-console.log("Names in the list:");
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
-}
+// // Script 4 - Print names from a list
+// let names = ["Alice", "Bob", "Charlie"];
+// console.log("Names in the list:");
+// for (let i = 0; i < names.length; i++) {
+//     console.log(names[i]);
+// }
 
 /*
 ===========================================
@@ -72,3 +72,39 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+
+function greetingUsers(name){
+   console.log(`Welcome, ${name}!`)
+};
+
+greetingUsers("Alice");
+greetingUsers("Bob");
+greetingUsers("Charlie");
+
+function add(a, b){
+   return a + b
+};
+
+function printSum(a, b){
+   console.log(`The sum of ${a} and ${b} is ${add(a, b)}`)
+};
+
+printSum(5, 10)
+
+function multiply(a, b){
+   return a * b
+};
+
+function printProduct(a, b){
+   console.log(`The product of ${a} and ${b} is ${multiply(a, b)}`)
+};
+
+printProduct(5, 10);
+
+function printNames(names){
+   console.log("Names in the list:")
+   for (let i = 0; i < names.length; i++) {
+      console.log(names[i]);
+}};
+
+printNames(["Alice", "Bob", "Charlie"]);
